@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |------+------+------+------+------+------|------+------+------+------+------+------|
   * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | Shift|
   * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Ctrl | Brite| Alt  | GUI  |Lower |    Space    |Raise |  Alt | GUI  | Menu | Ctrl |
+  * | Ctrl | Brite| GUI  | Alt  |Lower |    Space    |Raise |  Alt | GUI  | Menu | Ctrl |
   * `-----------------------------------------------------------------------------------'
   */
   [_QWERTY] = LAYOUT_preonic_1x2uC( \
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
     KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, \
-    KC_LCTL, BACKLIT, KC_LALT, KC_LGUI, LOWER,       KC_SPC,       RAISE,   KC_RALT, KC_RGUI, KC_APP, KC_RCTL  \
+    KC_LCTL, BACKLIT, KC_LGUI, KC_LALT, LOWER,       KC_SPC,       RAISE,   KC_RALT, KC_RGUI, KC_APP, KC_RCTL  \
   ),
 
   /* Colemak
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |------+------+------+------+------+------|------+------+------+------+------+------|
   * | Shift|      |      |      |      |      |   ,  |   1  |   2  |   3  |      | Shift|
   * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise |   0  |   .  | Ctrl | Shift|
+  * | Brite| Ctrl | GUI | Alt  |Lower |    Space    |Raise |   0  |   .  | Ctrl | Shift|
   * `-----------------------------------------------------------------------------------'
   */
   [_NUMPAD] = LAYOUT_preonic_1x2uC( \
@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  _______, KC_UP,   _______, _______, _______, _______, KC_P7,   KC_P8,   KC_P9,   KC_PPLS, KC_BSPC, \
     KC_BSPC, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, KC_P4,   KC_P5,   KC_P6,   _______, KC_QUOT, \
     KC_LSFT, _______, _______, _______, _______, _______, KC_COMM, KC_P1,   KC_P2,   KC_P3,   _______, KC_RSFT, \
-    BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,       KC_SPC,       RAISE,   KC_P0,   KC_PDOT, KC_RCTL, KC_RSFT  \
+    KC_LCTL, BACKLIT, KC_LGUI, KC_LALT, LOWER,       KC_SPC,       RAISE,   KC_P0,   KC_PDOT, KC_RCTL, KC_RSFT  \
   ),
 
 
@@ -133,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |------+------+------+------+------+------|------+------+------+------+------+------|
   * | Shift|   |  |      |      |      |      |      |      |      |   ¢  |   Up | Shift|
   * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Ctrl | Brite| Alt  | GUI  |Lower |    Enter    |Raise |      | Left | Down | Right|
+  * | Ctrl | Brite| GUI  | Alt  |Lower |    Enter    |Raise |      | Left | Down | Right|
   * `-----------------------------------------------------------------------------------'
   */
   [_LOWER] = LAYOUT_preonic_1x2uC( \
@@ -141,7 +141,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  _______, KC_UP,   _______, _______, _______, _______, KC_UNDS, KC_MINS, KC_PLUS, KC_EQL,  KC_BSPC, \
     KC_BSPC, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC, KC_BSLS, \
     KC_LSFT, KC_PIPE, _______, _______, _______, _______, _______, _______, ALGR_T(KC_4), ALGR_T(KC_5), KC_UP,  KC_RSFT, \
-    KC_LCTL, BACKLIT, KC_LALT, KC_LGUI, LOWER,       KC_ENT,       RAISE,   _______, KC_LEFT, KC_DOWN, KC_RIGHT  \
+    KC_LCTL, BACKLIT, KC_LGUI, KC_LALT, LOWER,       KC_ENT,       RAISE,   _______, KC_LEFT, KC_DOWN, KC_RIGHT  \
   ),
 
   /* Raise
@@ -154,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |------+------+------+------+------+------|------+------+------+------+------+------|
   * | Shift|  \   |      |      |      |      |      |      |      |   ¢  |   Up | Shift|
   * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Ctrl | Brite| Alt  | GUI  |Lower |    Enter    |Raise |      | Left | Down | Right|
+  * | Ctrl | Brite| GUI  | Alt  |Lower |    Enter    |Raise |      | Left | Down | Right|
   * `-----------------------------------------------------------------------------------'
   */
   [_RAISE] = LAYOUT_preonic_1x2uC( \
@@ -162,7 +162,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  _______, KC_UP,   _______, _______, _______, _______, KC_MINS, KC_UNDS, KC_EQL,  KC_PLUS, KC_BSPC, \
     KC_BSPC, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_PIPE, \
     KC_LSFT, KC_BSLS, _______, _______, _______, _______, _______, _______, _______, ALGR_T(KC_DLR), KC_UP,  KC_RSFT, \
-    KC_LCTL, BACKLIT, KC_LALT, KC_LGUI, LOWER,       KC_ENT,       RAISE,   _______, KC_LEFT, KC_DOWN, KC_RIGHT  \
+    KC_LCTL, BACKLIT, KC_LGUI, KC_LALT, LOWER,       KC_ENT,       RAISE,   _______, KC_LEFT, KC_DOWN, KC_RIGHT  \
   ),
 
   /* Adjust (Lower + Raise)
