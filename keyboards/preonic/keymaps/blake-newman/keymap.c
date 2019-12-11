@@ -210,7 +210,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           break;
         case NUMPAD:
           if (record->event.pressed) {
-            set_single_persistent_default_layer(_NUMPAD);0
+            set_single_persistent_default_layer(_NUMPAD);
           }
           return false;
           break;
