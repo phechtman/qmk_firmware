@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |------+------+------+------+------+------|------+------+------+------+------+------|
   * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | Shift|
   * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise |      |  Alt | Ctrl | Shift|
+  * | Ctrl | Brite| Alt  | GUI  |Lower |    Space    |Raise |  Alt | GUI  | Menu | Ctrl |
   * `-----------------------------------------------------------------------------------'
   */
   [_QWERTY] = LAYOUT_preonic_1x2uC( \
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
     KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, \
-    BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,       KC_SPC,       RAISE,   _______, KC_RALT, KC_RCTL, KC_RSFT  \
+    KC_LCTL, BACKLIT, KC_LALT, KC_LGUI, LOWER,       KC_SPC,       RAISE,   KC_RALT, KC_RGUI, KC_APP, KC_RCTL  \
   ),
 
   /* Colemak
@@ -131,17 +131,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |------+------+------+------+------+-------------+------+------+------+------+------|
   * |  Bksp| Left | Down | Right|      |      |      |   {  |   }  |   [  |   ]  |   \  |
   * |------+------+------+------+------+------|------+------+------+------+------+------|
-  * | Shift|   |  |      |      |      |      |      |      |      |   ¢  |   €  | Shift|
+  * | Shift|   |  |      |      |      |      |      |      |      |   ¢  |   Up | Shift|
   * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Brite| Ctrl | Alt  | GUI  |Lower |    Enter    |Raise |      |  Alt | Ctrl | Shift|
+  * | Ctrl | Brite| Alt  | GUI  |Lower |    Enter    |Raise |      | Left | Down | Right|
   * `-----------------------------------------------------------------------------------'
   */
   [_LOWER] = LAYOUT_preonic_1x2uC( \
     KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  \
     KC_ESC,  _______, KC_UP,   _______, _______, _______, _______, KC_UNDS, KC_MINS, KC_PLUS, KC_EQL,  KC_BSPC, \
     KC_BSPC, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC, KC_BSLS, \
-    KC_LSFT, KC_PIPE, _______, _______, _______, _______, _______, _______, ALGR_T(KC_4), ALGR_T(KC_5), _______,  KC_RSFT, \
-    BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,       KC_ENT,       RAISE,   _______, KC_RALT, KC_RCTL, KC_RSFT  \
+    KC_LSFT, KC_PIPE, _______, _______, _______, _______, _______, _______, ALGR_T(KC_4), ALGR_T(KC_5), KC_UP,  KC_RSFT, \
+    KC_LCTL, BACKLIT, KC_LALT, KC_LGUI, LOWER,       KC_ENT,       RAISE,   _______, KC_LEFT, KC_DOWN, KC_RIGHT  \
   ),
 
   /* Raise
@@ -152,17 +152,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |------+------+------+------+------+-------------+------+------+------+------+------|
   * | Bksp | Left | Down | Right|      |      |      |   [  |  ]   |   {  |   }  |   |  |
   * |------+------+------+------+------+------|------+------+------+------+------+------|
-  * | Shift|  \   |      |      |      |      |      |      |      |   £  |  $   | Shift|
+  * | Shift|  \   |      |      |      |      |      |      |      |   ¢  |   Up | Shift|
   * |------+------+------+------+------+------+------+------+------+------+------+------|
-  * | Brite| Ctrl | Alt  | GUI  |Lower |    Enter    |Raise |      |  Alt | Ctrl | Shift|
+  * | Ctrl | Brite| Alt  | GUI  |Lower |    Enter    |Raise |      | Left | Down | Right|
   * `-----------------------------------------------------------------------------------'
   */
   [_RAISE] = LAYOUT_preonic_1x2uC( \
     KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  \
     KC_ESC,  _______, KC_UP,   _______, _______, _______, _______, KC_MINS, KC_UNDS, KC_EQL,  KC_PLUS, KC_BSPC, \
     KC_BSPC, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_PIPE, \
-    KC_LSFT, KC_BSLS, _______, _______, _______, _______, _______, _______, _______, ALGR_T(KC_DLR), KC_DLR,  KC_RSFT, \
-    BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,       KC_ENT,       RAISE,   _______, KC_RALT, KC_RCTL, KC_RSFT  \
+    KC_LSFT, KC_BSLS, _______, _______, _______, _______, _______, _______, _______, ALGR_T(KC_DLR), KC_UP,  KC_RSFT, \
+    KC_LCTL, BACKLIT, KC_LALT, KC_LGUI, LOWER,       KC_ENT,       RAISE,   _______, KC_LEFT, KC_DOWN, KC_RIGHT  \
   ),
 
   /* Adjust (Lower + Raise)
@@ -210,7 +210,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           break;
         case NUMPAD:
           if (record->event.pressed) {
-            set_single_persistent_default_layer(_NUMPAD);
+            set_single_persistent_default_layer(_NUMPAD);0
           }
           return false;
           break;
@@ -234,19 +234,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
           return false;
           break;
-        case BACKLIT:
-          if (record->event.pressed) {
-            register_code(KC_RSFT);
-            #ifdef BACKLIGHT_ENABLE
-              backlight_step();
-            #endif
-            PORTE &= ~(1<<6);
-          } else {
-            unregister_code(KC_RSFT);
-            PORTE |= (1<<6);
-          }
-          return false;
-          break;
+        // case BACKLIT:
+        //   if (record->event.pressed) {
+        //     register_code(KC_RSFT);
+        //     #ifdef BACKLIGHT_ENABLE
+        //       backlight_step();
+        //     #endif
+        //     PORTE &= ~(1<<6);
+        //   } else {
+        //     unregister_code(KC_RSFT);
+        //     PORTE |= (1<<6);
+        //   }
+        //   return false;
+        //   break;
       }
     return true;
 };
