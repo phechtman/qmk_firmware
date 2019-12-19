@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * `-----------------------------------------------------------------------------------'
   */
   [_GAME] = LAYOUT_preonic_1x2uC( \
-    KC_Esc,  KC_1,    KC_2,    KC_5,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,  \
+    KC_ESC,  KC_1,    KC_2,    KC_5,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,  \
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
     KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP, KC_RSFT, \
@@ -287,7 +287,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 bool numpadActive = false;
 
-float tone_numpad_on[][2] = SONG(NUMPAD_ON_SOUND);
+// float tone_numpad_on[][2] = SONG(NUMPAD_ON_SOUND);
 
 void matrix_scan_user (void) {
   uint8_t layer = biton32(layer_state);
@@ -296,7 +296,7 @@ void matrix_scan_user (void) {
     case _NUMPAD:
       if (!numpadActive) {
         numpadActive = true;
-        PLAY_SONG(tone_numpad_on);
+        // PLAY_SONG(tone_numpad_on);
       }
       break;
     default:
